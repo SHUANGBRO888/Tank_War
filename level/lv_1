@@ -1,0 +1,10 @@
+enemyCount=2
+enemyType=1
+method=addRow
+invokeCount=5
+levelType=1
+param1=0,0,0,0,0
+param2=0,2,0,2,1.5
+param3=0,4,0,3,0
+param4=0,6,0,0,1.2
+param5=0,8,0,2,0

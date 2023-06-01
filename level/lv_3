@@ -1,0 +1,11 @@
+enemyCount=2
+
+enemyType=0,1
+
+method=addRect
+
+invokeCount=1
+
+levelType=1
+
+param1=0,0,0,0,3,1.4
