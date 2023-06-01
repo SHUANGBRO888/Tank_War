@@ -31,16 +31,17 @@ public class Explode {
     private int index;
 
     private boolean visible =true;
+  
+    public Explode() {
+        index = 0;
+    }
 
     public Explode(int x, int y) {
         this.x = x;
         this.y = y;
         index = 0;
     }
-    
-    public Explode() {
-        index = 0;
-    }
+
 
 
     public void draw(Graphics g){

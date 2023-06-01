@@ -38,7 +38,7 @@ public class Constant {
     };
 
     public static final String Over_Str0 = "Press 'Esc' to exit";
-    public static final String Over_Str1 = "Press 'Enter' back to Menus";
+    public static final String Over_Str1 = "Press 'Enter' to Menus";
 
     // Font
     public static final Font Game_Font = new Font("Times New Roman",Font.BOLD,24);

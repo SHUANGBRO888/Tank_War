@@ -46,8 +46,8 @@ public class EnemyTank extends Tank{
         aiTime = System.currentTimeMillis();
     }
 
-      // Create Enermies Tank
-      public static Tank createEnemy(){
+    // Create Enermies Tank
+    public static Tank createEnemy(){
         int x = MyUtil.getRandomNumber(0, 2) == 0 ? Radius : Constant.Frame_Width -  Radius;
         int y = GameFrame.titleBarH +  Radius;
         int dir = Dir_Down;

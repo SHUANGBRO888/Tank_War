@@ -186,7 +186,7 @@ public class GameFrame extends Frame implements Runnable{
         // Remainder for input 
         g.setColor(Color.WHITE);
         g.drawString(Over_Str0, 10, Frame_Height -20);
-        g.drawString(Over_Str1, Frame_Width - 200, Frame_Height -20);
+        g.drawString(Over_Str1, Frame_Width - 250, Frame_Height -20);
 
         // Game over text
         g.setColor(Color.WHITE);
@@ -434,11 +434,11 @@ public class GameFrame extends Frame implements Runnable{
         switch (keyCode) {
             case KeyEvent.VK_UP:
             case KeyEvent.VK_W:
-                if (--menuIndex <0) menuIndex = MENUS.length - 1;
+                if (--menuIndex <0) {menuIndex = MENUS.length - 1;}
                 break;
             case KeyEvent.VK_DOWN:
             case KeyEvent.VK_S:
-                if (++menuIndex > MENUS.length - 1) menuIndex = 0;
+                if (++menuIndex > MENUS.length - 1) {menuIndex = 0;}
                 break; 
             case KeyEvent.VK_ENTER:
             switch(menuIndex){
@@ -539,6 +539,7 @@ public class GameFrame extends Frame implements Runnable{
         if(myTank.isCollideTile(gameMap.getTiles())){
             myTank.back();
         }
+        // enemy tank & maptile
         for (int i = 0; i < enemies.size(); i++) {
             Tank enemy = enemies.get(i);
             if(enemy.isCollideTile(gameMap.getTiles())){

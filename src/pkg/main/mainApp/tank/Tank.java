@@ -149,6 +149,8 @@ public abstract class Tank {
 
     // Move
     private void move(){
+        oldX = x;
+        oldY = y;
         switch(dir){
             case Dir_Up:
                 y -= speed;
@@ -337,7 +339,7 @@ public abstract class Tank {
             Bullet bullet = bullets.get(i);
             int bulletY = bullet.getY();
             int bulletX = bullet.getX();
-            if (MyUtil.isCollide(x, y, Radius, bulletX, bulletY)) {
+            if (MyUtil.isCollide(this.x, y, Radius, bulletX, bulletY)) {
                 // Bullet Disappear
                 bullet.setVisible(false);
                 // Get atk
@@ -488,51 +490,35 @@ public abstract class Tank {
             int tileY = tile.getY();
             boolean collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
             // Return true if collision occurs, otherwise continue checking the next point
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 2: Top-center point
             tileX += Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 3: Top-right corner
             tileX += Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 4: Middle-right point
             tileY += Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 5: Bottom-right corner
             tileY += Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 6: Bottom-center point
             tileX -= Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 7: Bottom-left point
             tileX -= Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
             // Point 8: Left-center point
             tileY -= Maptile.radius;
             collide = MyUtil.isCollide(x, y, Radius, tileX, tileY);
-            if(collide){
-                return true;
-            }
+            if(collide){return true;}
         }
         return false;
     }

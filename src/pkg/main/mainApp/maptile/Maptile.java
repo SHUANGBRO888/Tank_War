@@ -48,7 +48,7 @@ public class Maptile {
     public Maptile(int x, int y) {
         this.x = x;
         this.y = y;
-        if(tileW <=0)tileW = tileImg[TYPE_NORMAL].getWidth(null);
+        if(tileW <=0){tileW = tileImg[TYPE_NORMAL].getWidth(null);}
     }
 
     public void draw(Graphics g){

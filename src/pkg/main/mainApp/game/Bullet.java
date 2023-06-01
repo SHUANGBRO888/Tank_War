@@ -33,9 +33,7 @@ public class Bullet {
     }
 
     // For bullet pool
-    public Bullet(){
-
-    }
+    public Bullet(){}
     
     // Draw
     public void draw(Graphics g){
